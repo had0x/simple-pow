@@ -1,0 +1,17 @@
+[package]
+name = "simple-pow"
+version = "0.1.0"
+edition = "2018"
+
+
+[dependencies]
+hex = "0.4.3"
+sha2 = "0.9.6"
+
+
+[profile.release]
+lto="fat"
+codegen-units = 1
+
+[profile.bench]
+debug = true
